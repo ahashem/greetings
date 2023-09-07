@@ -1,0 +1,28 @@
+.DS_Store
+.git/
+Dockerfile
+docker-compose.yml
+node_modules/
+.dockerignore
+
+# infra-related
+kubernetes
+iac
+graphs
+coverage
+.circleci
+.travis*
+
+# random files
+*/temp*
+*/*/temp*
+temp?
+dist
+
+#IDE
+.idea
+.vscode
+
+# dev and build
+.docker
+.dev.env

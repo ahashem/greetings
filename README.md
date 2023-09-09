@@ -8,7 +8,6 @@ Simple serverless API that returns a "Hello World" message.
 
 - **Cloud Provider**: AWS
 - **Programming Language**: Node.js
-- **Serverless Framework**: Serverless Framework
 - **Testing Framework**: Jest
 - **CI/CD**: GitHub Actions
 - **IaC**: Serverless Framework / Terraform (TBD)
@@ -16,9 +15,8 @@ Simple serverless API that returns a "Hello World" message.
 ## High-Level Plan (To-Do List)
 
 ### Planning and Setup
-- [ ] Select a Cloud Provider
-- [ ] Select a Programming Language
-- [ ] Select a Framework
+- [ ] Go with AWS as cloud provider?
+- [ ] Select a Framework (using NodeJS and TS)
 - [ ] Initialize Project
 
 ### Development
@@ -27,28 +25,31 @@ Simple serverless API that returns a "Hello World" message.
 - [ ] Select a Testing Framework
 - [ ] Write Tests
 
-### Infrastructure as Code
+### Infrastructure & CI/CD Pipeline 
 - [ ] Write IaC Code
-
-### CI/CD Pipeline
 - [ ] Select CI/CD Tool
 - [ ] Write Pipeline-as-Code
 
 ### Deployment
-- [ ] Deploy Locally for Testing
+- [ ] Deploy Locally for Testing (localstack?)
 - [ ] Deploy to Cloud
 - [ ] Test Cloud Deployment
 
 ### Scaling and Optimization
-- [ ] Consider Scalability
+- [ ] Consider Scalability paths
 - [ ] Monitor and Optimize
+- [ ] additional steps to cover...?
 
 ### Documentation and Cleanup
 - [ ] Document the Project
 - [ ] Code Cleanup and Final Review
+
 
 ## How to Setup and Run
 
 Instructions will be added as the project progresses.
 
 
+## Project Structure
+
+TBD

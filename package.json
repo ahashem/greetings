@@ -1,11 +1,17 @@
 {
   "name": "greetings",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple API to greet people",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@middy/core": "^4.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.17.15",
+    "typescript": "^5.2.2"
+  }
 }

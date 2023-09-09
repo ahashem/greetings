@@ -1,23 +1,42 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
-  plugins: ['prettier', '@typescript-eslint'],
-  parserOptions: {
-    project: './tsconfig.json',
-    ecmaVersion: 2021,
-    sourceType: 'module',
-  },
-  extends: [
-    'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
+  root: true,
+  ignorePatterns: ['**/*'],
+  plugins: ['@nx'],
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx', '*.js', '*.jsx'],
+      rules: {
+        '@nx/enforce-module-boundaries': [
+          'error',
+          {
+            enforceBuildableLibDependency: true,
+            allow: [],
+            depConstraints: [
+              {
+                sourceTag: '*',
+                onlyDependOnLibsWithTags: ['*'],
+              },
+            ],
+          },
+        ],
+      },
+    },
+    {
+      files: ['*.ts', '*.tsx'],
+      extends: ['plugin:@nx/typescript'],
+      rules: {},
+    },
+    {
+      files: ['*.js', '*.jsx'],
+      extends: ['plugin:@nx/javascript'],
+      rules: {},
+    },
+    {
+      files: ['*.spec.ts', '*.spec.tsx', '*.spec.js', '*.spec.jsx'],
+      env: {
+        jest: true,
+      },
+      rules: {},
+    },
   ],
-  ignorePatterns: ['.eslintrc.js'],
-  rules: {
-    '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
-    '@typescript-eslint/no-explicit-any': ['off'],
-    '@typescript-eslint/no-unused-vars': [
-      'warn',
-      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
-    ],
-    semi: ['error', 'always'],
-  },
 };

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "bundle": "yarn clean && yarn build && cp package.json dist/ && cd dist && npm install --omit=dev && cd ..",
+    "bundle": "yarn clean && yarn build && cp package.json dist/ && cd dist && yarn install --production && cd ..",
     "clean": "rm -rf dist",
     "destroy": "cd infra && terraform destroy -auto-approve && cd .."
   },

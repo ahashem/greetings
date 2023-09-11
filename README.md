@@ -15,15 +15,15 @@ Simple serverless API that returns a "Hello World" message.
 ## High-Level Plan (To-Do List)
 
 ### Planning and Setup
-- [ ] Go with AWS as cloud provider?
-- [ ] Select a Framework (using NodeJS and TS)
-- [ ] Initialize Project
+- [x] Go with AWS as cloud provider?
+- [x] Select a Framework (using NodeJS and TS)
+- [x] Initialize Project
 
 ### Development
-- [ ] Install Required Libraries
-- [ ] Create the API
-- [ ] Select a Testing Framework
-- [ ] Write Tests
+- [x] Install Required Libraries
+- [x] Create the API
+- [x] Select a Testing Framework
+- [x] Write Tests
 
 ### Infrastructure & CI/CD Pipeline 
 - [ ] Write IaC Code
@@ -31,8 +31,8 @@ Simple serverless API that returns a "Hello World" message.
 - [ ] Write Pipeline-as-Code
 
 ### Deployment
-- [ ] Deploy Locally for Testing (localstack?)
-- [ ] Deploy to Cloud
+- [x] Deploy Locally for Testing (localstack?) <- used [SAM CLI](https://aws.amazon.com/blogs/compute/aws-sam-support-for-hashicorp-terraform-now-generally-available/) 
+- [x] Deploy to Cloud
 - [ ] Test Cloud Deployment
 
 ### Scaling and Optimization
@@ -47,9 +47,25 @@ Simple serverless API that returns a "Hello World" message.
 
 ## How to Setup and Run
 
-Instructions will be added as the project progresses.
+To Run the project locally, you need to have the following installed:
+- nvm install
+- yarn install
+- yarn build
 
+- To invoke the lambda locally:
+  - install [SAM cli](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html)
+  - `yarn build`
+  - `cd infra/greetings`
+  - run `sam local invoke --event __test/greet-event.json`
+
+- to deploy to AWS:
+  - `yarn bundle`
+  - `cd infra/greetings`
+  - run `terraform plan -out tfplan`, check the plan and then run `terraform apply tfplan`
+  - run `sam deploy --guided`
+  - run `sam deploy --guided`
 
 ## Project Structure
 
 TBD
+

@@ -1,0 +1,14 @@
+version: 0.1
+default:
+  global:
+    parameters:
+      hook_name: terraform
+      skip_prepare_infra: true
+  build:
+    parameters:
+      terraform_project_root_path: ../
+      beta_features: true
+  local_invoke:
+    parameters:
+      terraform_project_root_path: ../
+      beta_features: true

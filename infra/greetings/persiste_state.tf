@@ -11,8 +11,8 @@ module "terraform_state_lock_dynamodb" {
     },
   ]
 
-  read_capacity  = 5
-  write_capacity = 5
+  read_capacity  = 1
+  write_capacity = 1
 }
 
 module "tf_state_bucket" {

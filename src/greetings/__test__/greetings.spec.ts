@@ -1,4 +1,4 @@
-import {greeting} from './greetings';
+import {greeting} from '../greetings';
 
 describe('greetings', () => {
     it('should return statusCode 200', async () => {

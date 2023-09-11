@@ -1,0 +1,41 @@
+{
+  "affected": {
+    "defaultBase": "main"
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/node"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*",
+      "peerDependencies": "*"
+    },
+    "workspace.json": "*"
+  },
+  "npmScope": "app",
+  "targetDefaults": {
+    "test": {
+      "inputs": [
+        "default",
+        "^default",
+        "{workspaceRoot}/jest.preset.js"
+      ]
+    }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test"
+        ]
+      },
+      "runner": "nx/tasks-runners/default"
+    }
+  },
+  "workspaceLayout": {
+    "appsDir": "services"
+  }
+}

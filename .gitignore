@@ -4,6 +4,7 @@
 
 .dev.env
 .docker
+tmp
 builds
 tmp
 
@@ -394,3 +395,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of Ultimate GitIgnore for Javascript/Node.js
+
